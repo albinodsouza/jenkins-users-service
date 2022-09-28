@@ -17,7 +17,7 @@
 		<java.version>17</java.version>
 		<sonar.host.url>http://54.172.112.229:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
-		<sonar.password>Welcome#123</sonar.password>
+		<sonar.password>Albino@151</sonar.password>
 		<sonar.projectName>UserService springboot</sonar.projectName>
 	</properties>
 	<dependencies>
