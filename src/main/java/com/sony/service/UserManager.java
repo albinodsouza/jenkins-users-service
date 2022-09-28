@@ -18,10 +18,10 @@ public class UserManager {
 	user = new User("Albino","Dsouza","some@gmail.com","Kaiga");
 	users.put(user.getId(), user);
 	
-	user = new User("john","doe","john@gmail.com","texas");
+	user = new User("Great","doe","great@gmail.com","texas");
 	users.put(user.getId(), user);
 	
-	user = new User("jack","sparrow","jack@gmail.com","NY");
+	user = new User("jack","you","you@gmail.com","NY");
 	users.put(user.getId(), user);
 }
 
