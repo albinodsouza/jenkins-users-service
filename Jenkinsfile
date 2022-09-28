@@ -9,14 +9,14 @@ pipeline{
 stage('compile'){
             steps{
                 sh 'mvn compile'
-}
+} 
 }
 
-stage('quality'){
+/*stage('quality'){
             steps{
-                sh 'mvn sonar:sonar'
+              sh 'mvn sonar:sonar'
 }
-}
+}*/
 stage('test'){
             steps{
                 sh 'mvn test'
@@ -27,6 +27,17 @@ stage('test'){
 stage('jar'){
             steps{
                 sh 'mvn package -DskipTests=true'
+}
+}
+stage('build'){
+            steps{
+                sh 'mvn package -DskipTests=true'
+}
+}
+
+stage('dockersize'){
+            steps{
+                sh 'docker build -t user-service:latest .'
 }
 }
 }
