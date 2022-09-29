@@ -52,7 +52,7 @@ stage('dockersize'){
 stage('integration tests'){
             steps{
               echo 'running the top-user-service-container for integration testing...'
-                sh 'docker run -dp 7070:8080 --rm --name ${DOCKER_TMP_CONTAINER_NAME}:latest'
+                sh 'docker run -dp 7070:8080 --rm --name ${DOCKER_TMP_CONTAINER_NAME} ${DOCKER_IMG_NAME}:latest'
                 sleep 30
                 sh 'curl -i http://localhost:7070/api/users'
 }
