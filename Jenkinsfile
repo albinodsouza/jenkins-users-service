@@ -3,7 +3,7 @@ pipeline{
     
     environment{
        DOCKER_IMG_NAME = 'user-service'
-       DOCKER_TMP_CONTAINER_NAME = 'top-user-service-container'\
+       DOCKER_TMP_CONTAINER_NAME = 'top-user-service-container'
        DOCKER_REPO='albinodsouza'
        }
        
