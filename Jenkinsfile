@@ -51,8 +51,8 @@ stage('integration tests'){
 }
 
 post{
-always{
-sh 'docker stop tmp-user-service-container'
+   always{
+       sh 'docker stop tmp-user-service-container'
 }
 }
 }
