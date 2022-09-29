@@ -63,7 +63,7 @@ post{
    always{
  echo 'stopping and removing the top-user-service-container...'
           sh 'docker stop ${DOCKER_TMP_CONTAINER_NAME}'
-          sh "docker rm1 ${DOCKER_IMG_NAME}:latest ${DOCKER_IMG_NAME}:${env.BUILD_ID}"
+          sh "docker rmi ${DOCKER_IMG_NAME}:latest ${DOCKER_IMG_NAME}:${env.BUILD_ID}"
 }
 }
 }
