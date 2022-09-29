@@ -45,7 +45,7 @@ stage('dockersize'){
             steps{
             
             echo 'building the docker image for user-service'
-                sh 'docker build -t ${DOCKER_IMG_NAME}:latest -t ${DOCKER_IMG_NAME}:${env.BUILD_ID} .'
+                sh "docker build -t ${DOCKER_IMG_NAME}:latest -t ${DOCKER_IMG_NAME}:${env.BUILD_ID} ."
 }
 }
 
@@ -61,7 +61,9 @@ stage('integration tests'){
 
 post{
    always{
-          sh 'docker stop tmp-user-service-container'
+ echo 'stopping and removing the top-user-service-container...'
+          sh 'docker stop ${DOCKER_TMP_CONTAINER_NAME}'
+          sh "docker rm1 ${DOCKER_IMG_NAME}:latest ${DOCKER_IMG_NAME}:${env.BUILD_ID}"
 }
 }
 }
