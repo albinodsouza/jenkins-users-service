@@ -43,7 +43,7 @@ stage('dockersize'){
 
 stage('integration tests'){
             steps{
-                sh 'docker run -dp 7070:8080 --rm --name tmp-user-service-conatiner user-service:localhost'
+                sh 'docker run -dp 7070:8080 --rm --name tmp-user-service-conatiner user-service:latest'
                 sleep 30
                 sh 'curl -i http://localhost:7070/api/users'
 }
@@ -52,7 +52,7 @@ stage('integration tests'){
 
 post{
    always{
-       sh 'docker stop tmp-user-service-container'
+          sh 'docker stop tmp-user-service-container'
 }
 }
 }
